@@ -1,0 +1,8 @@
+<!-- app/views/blogs/index.html.erb -->
+<h1>Blogs</h1>
+<a href="/blogs/new">Generate More</a>
+<ul>
+  <% @blogs.each do |b| %>
+    <li><a href="/blogs/<%= b.id %>"><%= b.title %></a> - <%= b.created_at %></li>
+  <% end %>
+</ul>

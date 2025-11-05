@@ -1,0 +1,9 @@
+<!-- app/views/blogs/new.html.erb -->
+<h1>Generate Blog Posts (Gemini)</h1>
+<p>Enter each title on a new line. Optionally add details after ' - '</p>
+<form action="/blogs" method="post">
+  <textarea name="titles" rows="12" cols="80" placeholder="Introduction to Ruby on Rails - explain MVC"></textarea><br/>
+  <input type="submit" value="Generate Articles"/>
+</form>
+<hr/>
+<a href="/blogs">View Blogs</a>
