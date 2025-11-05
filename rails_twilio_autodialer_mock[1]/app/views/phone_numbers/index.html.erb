@@ -1,0 +1,14 @@
+<!-- app/views/phone_numbers/index.html.erb -->
+<h1>Call Results (Static)</h1>
+<% if @results.present? %>
+  <table border="1" cellpadding="6">
+    <tr><th>Number</th><th>Status</th><th>Notes</th></tr>
+    <% @results.each do |r| %>
+      <tr><td><%= r[:number] %></td><td><%= r[:status] %></td><td><%= r[:notes] %></td></tr>
+    <% end %>
+  </table>
+<% else %>
+  <p>No results. Click Start Calls to generate output.csv from db/phone_numbers.csv</p>
+<% end %>
+<hr/>
+<a href="/">Back</a>
